@@ -20,7 +20,7 @@ function Home() {
   );
 
   return (
-    <Container sx={{ mt: 4 , maxWidth:"1300px !important"}}>
+    <Container sx={{ mt: 4 }}>
       <Typography variant="h4" align="center" gutterBottom>
         User Directory
       </Typography>
@@ -36,7 +36,7 @@ function Home() {
 
       <Grid container spacing={3}>
         {filteredUsers.map((user, index) => (
-          <Grid item xs={12} sm={6}  key={index}>
+          <Grid item xs={12} sm={6} md={4} key={index} sx={{ display: "flex" }}>
             <UserCard user={user} />
           </Grid>
         ))}

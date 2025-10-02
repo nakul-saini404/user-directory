@@ -33,13 +33,16 @@ function UserCard({ user }) {
     <Card
       sx={{
         display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
         alignItems: "center",
         p: 2,
         borderRadius: 3,
         boxShadow: 3,
-        height: 180,
         width: "100%",
-        boxSizing: "border-box",
+        height: "100%",
+        minHeight: 220,
+        minWidth: 350,
       }}
     >
       <Avatar
@@ -47,18 +50,20 @@ function UserCard({ user }) {
         alt={user.name.first}
         sx={{ width: 64, height: 64, mr: 2 }}
       />
-      <CardContent sx={{ flex: 1 }}>
+      <CardContent sx={{ textAlign: "center" }}>
         <Link
           to={`/user/${user.login.uuid}`}
           state={{ user }}
           style={{ textDecoration: "none", color: "inherit" }}
         >
-          <Typography variant="h6">
+          <Typography variant="h6" noWrap>
             {user.name.first} {user.name.last}
           </Typography>
         </Link>
-        <Typography color="text.secondary">{user.email}</Typography>
-        <Typography variant="body2">
+        <Typography color="text.secondary" noWrap>
+          {user.email}
+        </Typography>
+        <Typography variant="body2" noWrap>
           {user.location.city}, {user.location.country}
         </Typography>
       </CardContent>
