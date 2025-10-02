@@ -7,7 +7,7 @@ function Home() {
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    fetch("https://randomuser.me/api/?results=20")
+    fetch("https://randomuser.me/api/?results=50")
       .then((res) => res.json())
       .then((data) => setUsers(data.results))
       .catch((err) => console.error(err));
