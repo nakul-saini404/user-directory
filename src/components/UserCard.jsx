@@ -37,6 +37,7 @@ function UserCard({ user }) {
         p: 1,
         borderRadius: 2,
         boxShadow: 3,
+        height: "100%" ,
       }}
     >
       <Avatar
