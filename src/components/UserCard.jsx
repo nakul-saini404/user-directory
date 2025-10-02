@@ -34,10 +34,12 @@ function UserCard({ user }) {
       sx={{
         display: "flex",
         alignItems: "center",
-        p: 1,
-        borderRadius: 2,
+        p: 2,
+        borderRadius: 3,
         boxShadow: 3,
-        height: "100%" ,
+        height: 180,
+        width: "100%",
+        boxSizing: "border-box",
       }}
     >
       <Avatar
